@@ -15,8 +15,9 @@ class CRUD <T>{
 
     //update
     async update(i:number,e:T){
-        //update user in db
+        //api call to update the user
         const p = await updateData(users.items[i].email,e);
+        //update ui only if call was succesfull
         if(p?.data?.updateUser){
             //if success then change Ui
             this.items = p?.data?.updateUser;

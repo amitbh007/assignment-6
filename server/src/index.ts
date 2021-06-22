@@ -13,7 +13,6 @@ const main = async ()=>{
 
     app.use(cors({
         origin:'http://127.0.0.1:5500',
-        // credentials:true
     }))
 
     const appoloServer = new ApolloServer({
@@ -21,10 +20,10 @@ const main = async ()=>{
             resolvers:[UserResolver],
             validate:false
         }),
-        //context will be accesible to all resolvers
-        // context:({req,res})=> ({ req,res})
+        
     })
 
+    //add the express server as middleware and enable /graphql playground
     appoloServer.applyMiddleware({app,cors:false});
 
     app.listen(4000,()=>{   

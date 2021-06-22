@@ -4,9 +4,6 @@ import { Int,Field, ObjectType } from "type-graphql";
 //act as tables in sql
 @ObjectType()
 export class User {
-  //defining the attributes
-  // @Field()
-  // _id!: number;
 
   @Field()
   firstName!: string;

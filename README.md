@@ -17,5 +17,8 @@
 ## How to run
 
 server : npm run dev
+<br />
 client : run html file through a http server ( port 5000 used in cors )
+<br />
+test the graphql queries/mutations at http://localhost:4000/graphql
 
